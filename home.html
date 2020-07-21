@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="homeStyle.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-main">
+        <div class="nav-content">
+          <div class="nav-first-item">
+            <div class="nav-logo">
+              <a href="#"> <img src="./assets/logo.png" alt="" /></a>
+            </div>
+            <div class="nav-favour">
+              <a href="#favour-link">Favourites</a>
+            </div>
+          </div>
+          <div class="nav-second-item">
+            <div class="nav-search">
+              <div class="search-magnify-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <div class="search-microphone-icon">
+                <i class="fas fa-microphone"></i>
+              </div>
+              <input type="text" placeholder="Search for music you love!" />
+            </div>
+            <div class="nav-notify"><i class="fas fa-bell"></i></div>
+            <div class="nav-profile">
+              <img src="./assets/profile.JPG" alt="" />
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="main-content">
+
+
+
+    <main>
+      <div class="scroll">
+        <section class="main-carousel">
+          <div class="main-posters-container">
+            <div class="main-poster-item">
+              <img src="./assets/poster3.jpeg" alt="" />
+            </div>
+            <div class="main-poster-item">
+              <img src="./assets/poster5.jpeg" alt="" />
+            </div>
+            <div class="main-poster-item">
+              <img src="./assets/poster1.jpeg" alt="" />
+            </div>
+            <div class="main-poster-item">
+              <img src="./assets/poster4.jpeg" alt="" />
+            </div>
+            <div class="main-poster-item">
+              <img src="./assets/poster8.jpeg" alt="" />
+            </div>
+            <div class="main-poster-item">
+              <img src="./assets/poster6.jpeg" alt="" />
+            </div>
+            <div class="main-poster-item">
+              <img src="./assets/poster2.jpeg" alt="" />
+            </div>
+            <div class="main-poster-item">
+              <img src="./assets/poster7.jpeg" alt="" />
+            </div>
+
+          </div>
+        </section>
+
+        <section class="main-latest-release">
+
+
+          <div class="main-release-heading">Latest Release</div>
+          <div class="latest-release-container">
+            <div class="latest-release-item">
+              <div class="latest-release-poster">
+
+                <input type="radio" hidden id="pausebtn1" name="play-pause">
+                <label for="pausebtn1">
+                  <div class="play"> <i class="fas fa-play"></i></div>
+                  <div class="pause"> <i class="fas fa-pause"></i></div>
+                  <img src="./assets/latestpos1.jpeg" alt="" />
+
+                  <!--  -->
+
+                  <div class="music-player" id="dispclick">
+
+                    <div class="music-player-container">
+
+                      <div class="music-player-start">
+                        <div class="player-poster"><img src="./assets/player2.jpeg" alt=""></div>
+                        <div class="music-name">
+                          <span>Blinding Lights</span>
+                          <span id="ply-music-sb-head">The weeknd-Blinding Lights</span>
+                        </div>
+                      </div>
+                      <div class="music-player-control-container">
+
+                        <div class="player-controls">
+                          <span class="shuffle">
+                            <i class="fas fa-random"></i>
+                          </span>
+                          <span class="previous">
+                            <i class="fas fa-step-backward"></i>
+                          </span>
+                          <span class="pause-player-btn">
+                            <i class="fas fa-pause-circle"></i>
+                          </span>
+                          <span class="next">
+                            <i class="fas fa-step-forward"></i>
+                          </span>
+                          <span class="repeat">
+
+                          </span>
+                        </div>
+
+
+                      </div>
+
+                      <div class="music-player-end">
+
+                        <div class="music-duration">
+                          <span>0:00/3:21</span>
+                        </div>
+                        <div class="music-quality">
+                          <span>HD</span>
+                        </div>
+
+                        <div class="music-volume">
+                          <input type="range" min="0" max="100" step="1" id="slider" />
+                          <div class="btn-volume"><i class="fas fa-volume-up"></i></div>
+
+                        </div>
+                        <div class="ply-music-queue">
+                          <a href="#hidden-playlist">
+                            <i class="fas fa-list-ul"></i>
+
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="seek-div">
+                      <input type="range" id="music-progress" class="music-seek-bar" min="0" max="100">
+                    </div>
+
+                  </div>
+
+                  <!--  -->
+
+                </label>
+              </div>
+
+              <div class="latest-release-detail">
+                <span id="latest-title">'Till I Collapse</span>
+                <span id="latest-sub-title">The Eminem Show</span>
+
+
+              </div>
+              <div class="latest-music-menu">
+                <span id="latest-release-duration">4:57</span>
+                <div class="menu-main">
+                  <span id="menu-bar"><span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span></span>
+                  <div class="menu">
+                    <ul>
+                      <li><span><i class="fas fa-play"></i></span><span>Play Now</span></li>
+                      <li><span><i class="fas fa-plus"></i></span><span>Add to Queue</span></li>
+                      <li><span></span><i class="fas fa-bars"></i><span>Add To Favourites</span></li>
+                      <li><span><i class="fas fa-info-circle"></i></span><span>Get Info</span></li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="latest-release-item">
+              <div class="latest-release-poster">
+
+                <input type="radio" hidden id="pausebtn2" name="play-pause">
+                <label for="pausebtn2">
+                  <div class="play"> <i class="fas fa-play"></i></div>
+                  <div class="pause"> <i class="fas fa-pause"></i></div>
+                  <img src="./assets/lose.jpeg" alt="" />
+
+                  <!--  -->
+
+                  <div class="music-player" id="dispclick">
+
+                    <div class="music-player-container">
+
+                      <div class="music-player-start">
+                        <div class="player-poster"><img src="./assets/player2.jpeg" alt=""></div>
+                        <div class="music-name">
+                          <span>Blinding Lights</span>
+                          <span id="ply-music-sb-head">The weeknd-Blinding Lights</span>
+                        </div>
+                      </div>
+                      <div class="music-player-control-container">
+
+                        <div class="player-controls">
+                          <span class="shuffle">
+                            <i class="fas fa-random"></i>
+                          </span>
+                          <span class="previous">
+                            <i class="fas fa-step-backward"></i>
+                          </span>
+                          <span class="pause-player-btn">
+                            <i class="fas fa-pause-circle"></i>
+                          </span>
+                          <span class="next">
+                            <i class="fas fa-step-forward"></i>
+                          </span>
+                          <span class="repeat">
+
+                          </span>
+                        </div>
+
+
+                      </div>
+
+                      <div class="music-player-end">
+
+                        <div class="music-duration">
+                          <span>0:00/3:21</span>
+                        </div>
+                        <div class="music-quality">
+                          <span>HD</span>
+                        </div>
+
+                        <div class="music-volume">
+                          <input type="range" min="0" max="100" step="1" id="slider" />
+                          <div class="btn-volume"><i class="fas fa-volume-up"></i></div>
+
+                        </div>
+                        <div class="ply-music-queue">
+                          <a href="#hidden-playlist">
+                            <i class="fas fa-list-ul"></i>
+
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="seek-div">
+                      <input type="range" id="music-progress" class="music-seek-bar" min="0" max="100">
+                    </div>
+
+                  </div>
+
+                  <!--  -->
+                </label>
+              </div>
+              <div class="latest-release-detail">
+                <span id="latest-title">Lose Yourself</span>
+                <span id="latest-sub-title">Eminem-Curtain Call</span>
+
+
+              </div>
+              <div class="latest-music-menu">
+                <span id="latest-release-duration">4:57</span>
+                <div class="menu-main">
+                  <span id="menu-bar"><span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span></span>
+                  <div class="menu">
+                    <ul>
+                      <li><span><i class="fas fa-play"></i></span><span>Play Now</span></li>
+                      <li><span><i class="fas fa-plus"></i></span><span>Add to Queue</span></li>
+                      <li><span></span><i class="fas fa-bars"></i><span>Add To Favourites</span></li>
+                      <li><span><i class="fas fa-info-circle"></i></span><span>Get Info</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="latest-release-item">
+              <div class="latest-release-poster">
+
+                <input type="radio" hidden id="pausebtn3" name="play-pause">
+                <label for="pausebtn3">
+                  <div class="play"> <i class="fas fa-play"></i></div>
+                  <div class="pause"> <i class="fas fa-pause"></i></div>
+                  <img src="./assets/notafraid.jpeg" alt="" />
+                  <!--  -->
+
+                  <div class="music-player" id="dispclick">
+
+                    <div class="music-player-container">
+
+                      <div class="music-player-start">
+                        <div class="player-poster"><img src="./assets/player2.jpeg" alt=""></div>
+                        <div class="music-name">
+                          <span>Blinding Lights</span>
+                          <span id="ply-music-sb-head">The weeknd-Blinding Lights</span>
+                        </div>
+                      </div>
+                      <div class="music-player-control-container">
+
+                        <div class="player-controls">
+                          <span class="shuffle">
+                            <i class="fas fa-random"></i>
+                          </span>
+                          <span class="previous">
+                            <i class="fas fa-step-backward"></i>
+                          </span>
+                          <span class="pause-player-btn">
+                            <i class="fas fa-pause-circle"></i>
+                          </span>
+                          <span class="next">
+                            <i class="fas fa-step-forward"></i>
+                          </span>
+                          <span class="repeat">
+
+                          </span>
+                        </div>
+
+
+                      </div>
+
+                      <div class="music-player-end">
+
+                        <div class="music-duration">
+                          <span>0:00/3:21</span>
+                        </div>
+                        <div class="music-quality">
+                          <span>HD</span>
+                        </div>
+
+                        <div class="music-volume">
+                          <input type="range" min="0" max="100" step="1" id="slider" />
+                          <div class="btn-volume"><i class="fas fa-volume-up"></i></div>
+
+                        </div>
+                        <div class="ply-music-queue">
+                          <a href="#hidden-playlist">
+                            <i class="fas fa-list-ul"></i>
+
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="seek-div">
+                      <input type="range" id="music-progress" class="music-seek-bar" min="0" max="100">
+                    </div>
+
+                  </div>
+
+                  <!--  -->
+                </label>
+              </div>
+              <div class="latest-release-detail">
+                <span id="latest-title">Not Afraid</span>
+                <span id="latest-sub-title">Eminem-Recovery</span>
+
+
+              </div>
+              <div class="latest-music-menu">
+                <span id="latest-release-duration">4:57</span>
+                <div class="menu-main">
+                  <span id="menu-bar"><span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span></span>
+                  <div class="menu">
+                    <ul>
+                      <li><span><i class="fas fa-play"></i></span><span>Play Now</span></li>
+                      <li><span><i class="fas fa-plus"></i></span><span>Add to Queue</span></li>
+                      <li><span></span><i class="fas fa-bars"></i><span>Add To Favourites</span></li>
+                      <li><span><i class="fas fa-info-circle"></i></span><span>Get Info</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="latest-release-item">
+              <div class="latest-release-poster">
+
+                <input type="radio" hidden id="pausebtn4" name="play-pause">
+                <label for="pausebtn4">
+                  <div class="play"> <i class="fas fa-play"></i></div>
+                  <div class="pause"> <i class="fas fa-pause"></i></div>
+                  <img src="./assets/inyoureyes.jpeg" alt="" />
+
+                  <!--  -->
+
+                  <div class="music-player" id="dispclick">
+
+                    <div class="music-player-container">
+
+                      <div class="music-player-start">
+                        <div class="player-poster"><img src="./assets/player2.jpeg" alt=""></div>
+                        <div class="music-name">
+                          <span>Blinding Lights</span>
+                          <span id="ply-music-sb-head">The weeknd-Blinding Lights</span>
+                        </div>
+                      </div>
+                      <div class="music-player-control-container">
+
+                        <div class="player-controls">
+                          <span class="shuffle">
+                            <i class="fas fa-random"></i>
+                          </span>
+                          <span class="previous">
+                            <i class="fas fa-step-backward"></i>
+                          </span>
+                          <span class="pause-player-btn">
+                            <i class="fas fa-pause-circle"></i>
+                          </span>
+                          <span class="next">
+                            <i class="fas fa-step-forward"></i>
+                          </span>
+                          <span class="repeat">
+
+                          </span>
+                        </div>
+
+
+                      </div>
+
+                      <div class="music-player-end">
+
+                        <div class="music-duration">
+                          <span>0:00/3:21</span>
+                        </div>
+                        <div class="music-quality">
+                          <span>HD</span>
+                        </div>
+
+                        <div class="music-volume">
+                          <input type="range" min="0" max="100" step="1" id="slider" />
+                          <div class="btn-volume"><i class="fas fa-volume-up"></i></div>
+
+                        </div>
+                        <div class="ply-music-queue">
+                          <a href="#hidden-playlist">
+                            <i class="fas fa-list-ul"></i>
+
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="seek-div">
+                      <input type="range" id="music-progress" class="music-seek-bar" min="0" max="100">
+                    </div>
+
+                  </div>
+
+                  <!--  -->
+                </label>
+              </div>
+              <div class="latest-release-detail">
+                <span id="latest-title">In Your Eyes</span>
+                <span id="latest-sub-title">The Weeknd-After Hours</span>
+
+
+              </div>
+              <div class="latest-music-menu">
+                <span id="latest-release-duration">4:57</span>
+                <div class="menu-main">
+                  <span id="menu-bar"><span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span></span>
+                  <div class="menu">
+                    <ul>
+                      <li><span><i class="fas fa-play"></i></span><span>Play Now</span></li>
+                      <li><span><i class="fas fa-plus"></i></span><span>Add to Queue</span></li>
+                      <li><span></span><i class="fas fa-bars"></i><span>Add To Favourites</span></li>
+                      <li><span><i class="fas fa-info-circle"></i></span><span>Get Info</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="main-popular-artists" id="favour-link">
+          <div class="main-release-heading">Popular Artists</div>
+          <div class="popular-artists-container">
+            <div class="artist-item">
+              <img src="./assets/artist2.jpeg" alt="" />
+              <div class="artist-play"> <a href="./artist.html"><i class="fas fa-play"></i></a></div>
+              <span id="artists-name">Bruno Mars</span>
+            </div>
+            <div class="artist-item">
+              <img src="./assets/artist3.jpeg" alt="" />
+              <div class="artist-play"> <a href="./artist.html"><i class="fas fa-play"></i></a></div>
+              <span id="artists-name">Eminem</span>
+            </div>
+            <div class="artist-item">
+              <img src="./assets/artist4.jpeg" alt="" />
+              <div class="artist-play"> <a href="./artist.html"><i class="fas fa-play"></i></a></div>
+              <span id="artists-name">Ed Sheeran</span>
+            </div>
+            <div class="artist-item">
+              <img src="./assets/artist5.jpeg" alt="" />
+              <div class="artist-play"> <a href="./artist.html"><i class="fas fa-play"></i></a></div>
+              <span id="artists-name">Linkin Park</span>
+            </div>
+            <div class="artist-item">
+              <img src="./assets/artist7.jpeg" alt="" />
+              <div class="artist-play"> <a href="./artist.html"><i class="fas fa-play"></i></a></div>
+              <span id="artists-name">Charlie Puth</span>
+            </div>
+            <div class="artist-item">
+              <img src="./assets/weekend.jpeg" alt="" />
+              <div class="artist-play"> <a href="./artist.html"><i class="fas fa-play"></i></a></div>
+              <span id="artists-name">The Weeknd</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="main-genre">
+          <div class="main-release-heading">Radio Stations</div>
+          <div class="genre-container">
+            <div class="genre-item">
+              <img src="./assets/mood1.jpeg" alt="" />
+              <span id="artists-name">Relaxed</span>
+            </div>
+            <div class="genre-item">
+              <img src="./assets/mood2.jpeg" alt="" />
+              <span id="artists-name">Meditation</span>
+            </div>
+            <div class="genre-item">
+              <img src="./assets/mood7.jpeg" alt="" />
+              <span id="artists-name">Nostalgic</span>
+            </div>
+            <div class="genre-item">
+              <img src="./assets/mood3.jpeg" alt="" />
+              <span id="artists-name">Romantic</span>
+            </div>
+            <div class="genre-item">
+              <img src="./assets/mood4.jpeg" alt="" />
+              <span id="artists-name">Party</span>
+            </div>
+            <div class="genre-item">
+              <img src="./assets/mood5.jpeg" alt="" />
+              <span id="artists-name">Inspiration</span>
+            </div>
+            <div class="genre-item">
+              <img src="./assets/mood6.jpeg" alt="" />
+              <span id="artists-name">Road Trip</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="top-music-playlists">
+          <div class="main-release-heading">Top Trending Playlists</div>
+          <div class="playlists-container">
+            <div class="playlist-item">
+              <img src="./assets/top1.jpeg" alt="" />
+            </div>
+            <div class="playlist-item">
+              <img src="./assets/top2.jpeg" alt="" />
+            </div>
+            <div class="playlist-item">
+              <img src="./assets/top5.jpeg" alt="" />
+            </div>
+            <div class="playlist-item">
+              <img src="./assets/top6.jpeg" alt="" />
+            </div>
+            <div class="playlist-item">
+              <img src="./assets/top7.jpeg" alt="" />
+            </div>
+            <div class="playlist-item">
+              <img src="./assets/top4.jpeg" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="main-music-english">
+          <div class="main-release-heading">Latest English</div>
+          <div class="english-albums-container">
+            <div class="english-item"><img src="./assets/eng8.jpeg" alt=""></div>
+            <div class="english-item"><img src="./assets/eng2.jpeg" alt=""></div>
+            <div class="english-item"><img src="./assets/eng3.jpeg" alt=""></div>
+            <div class="english-item"><img src="./assets/eng4.jpeg" alt=""></div>
+            <div class="english-item"><img src="./assets/english8.jpeg" alt=""></div>
+            <div class="english-item"><img src="./assets/eng6.jpeg" alt=""></div>
+          </div>
+        </section>
+        <section class="main-music-hindi">
+          <div class="main-release-heading">Latest Hindi</div>
+          <div class="hindi-albums-container">
+            <div class="hindi-item"><img src="./assets/hindi1.jpeg" alt=""></div>
+            <div class="hindi-item"><img src="./assets/hindi2.jpeg" alt=""></div>
+            <div class="hindi-item"><img src="./assets/hindi3.jpeg" alt=""></div>
+            <div class="hindi-item"><img src="./assets/hindi4.jpeg" alt=""></div>
+            <div class="hindi-item"><img src="./assets/hindi5.jpeg" alt=""></div>
+            <div class="hindi-item"><img src="./assets/hindi6.jpeg" alt=""></div>
+        </section>
+      </div>
+    </main>
+
+    <aside>
+      <section class="music-queue">
+        <div class="queue-container">
+
+          <div class="queue-heading">My Playlist</div>
+          <div class="queue-sub-heading">
+            <span>Queue</span>
+            <span id="queue-menu"><i class="fas fa-chevron-down"></i></span>
+            <div class="queue-options">
+              <ul>
+                <li><span>Playlists</span></li>
+                <li><span>Favourite Songs</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="queue-cards-container">
+            <ul>
+              <li>
+                <div class="card-item-container">
+                  <div class="card-first-part">
+                    <span>01</span>
+                    <span><img src="./assets/player1.jpeg" alt=""></span>
+                    <span class="title">Believer</span>
+                    <span class="sub-title">Imagine Dragons</span>
+                  </div>
+                  <div class="card-second-part">
+
+                    <span class="like"><i class="far fa-heart"></i></span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item-container">
+                  <div class="card-first-part">
+                    <span>02</span>
+                    <span><img src="./assets/player2.jpeg" alt=""></span>
+                    <span class="title">Believer</span>
+                    <span class="sub-title">Imagine Dragons</span>
+                  </div>
+                  <div class="card-second-part">
+
+                    <span class="like"><i class="far fa-heart"></i></span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item-container">
+                  <div class="card-first-part">
+                    <span>03</span>
+                    <span><img src="./assets/player1.jpeg" alt=""></span>
+                    <span class="title">Believer</span>
+                    <span class="sub-title">Imagine Dragons</span>
+                  </div>
+                  <div class="card-second-part">
+
+                    <span class="like"><i class="far fa-heart"></i></span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item-container">
+                  <div class="card-first-part">
+                    <span>04</span>
+                    <span><img src="./assets/player2.jpeg" alt=""></span>
+                    <span class="title">Believer</span>
+                    <span class="sub-title">Imagine Dragons</span>
+                  </div>
+                  <div class="card-second-part">
+
+                    <span class="like"><i class="far fa-heart"></i></span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item-container">
+                  <div class="card-first-part">
+                    <span>05</span>
+                    <span><img src="./assets/player1.jpeg" alt=""></span>
+                    <span class="title">Believer</span>
+                    <span class="sub-title">Imagine Dragons</span>
+                  </div>
+                  <div class="card-second-part">
+
+                    <span class="like"><i class="far fa-heart"></i></span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item-container">
+                  <div class="card-first-part">
+                    <span>05</span>
+                    <span><img src="./assets/player1.jpeg" alt=""></span>
+                    <span class="title">Believer</span>
+                    <span class="sub-title">Imagine Dragons</span>
+                  </div>
+                  <div class="card-second-part">
+
+                    <span class="like"><i class="far fa-heart"></i></span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item-container">
+                  <div class="card-first-part">
+                    <span>05</span>
+                    <span><img src="./assets/player1.jpeg" alt=""></span>
+                    <span class="title">Believer</span>
+                    <span class="sub-title">Imagine Dragons</span>
+                  </div>
+                  <div class="card-second-part">
+
+                    <span class="like"><i class="far fa-heart"></i></span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item-container">
+                  <div class="card-first-part">
+                    <span>05</span>
+                    <span><img src="./assets/player1.jpeg" alt=""></span>
+                    <span class="title">Believer</span>
+                    <span class="sub-title">Imagine Dragons</span>
+                  </div>
+                  <div class="card-second-part">
+
+                    <span class="like"><i class="far fa-heart"></i></span>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+
+
+    <div class="queue-hidden-playlist" id="hidden-playlist">
+      <div class="queue-container">
+        <div class="close-queue">
+          <a href="#">
+            <i class="far fa-times-circle"></i>
+          </a>
+
+        </div>
+
+        <div class="queue-heading">Queue</div>
+        <div class="queue-sub-heading">
+          <span>Queue</span>
+          <span id="queue-menu"><i class="fas fa-chevron-down"></i></span>
+        </div>
+
+        <div class="queue-cards-container">
+          <ul>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>01</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>02</span>
+                  <span><img src="./assets/player2.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>03</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>04</span>
+                  <span><img src="./assets/player2.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>05</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>05</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>05</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>05</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>05</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>05</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-item-container">
+                <div class="card-first-part">
+                  <span>05</span>
+                  <span><img src="./assets/player1.jpeg" alt=""></span>
+                  <span class="title">Believer</span>
+                  <span class="sub-title">Imagine Dragons</span>
+                </div>
+                <div class="card-second-part">
+
+                  <span class="like"><i class="far fa-heart"></i></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>
