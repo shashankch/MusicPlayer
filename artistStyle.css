@@ -1,7 +1,7 @@
 html {
   font-size: 30px;
 }
-
+/* body styling */
 body {
   margin: 0px 30px;
   padding: 0px 30px;
@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   background-color: #0c1027;
 }
-
+/* navbar styling */
 .nav-main {
   height: 85px;
   width: 100%;
@@ -33,13 +33,13 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
+/* main page content styling */
 .main-content {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-
+/* setting width of main and aside section */
 main {
   width: 70%;
   display: flex;
@@ -49,7 +49,7 @@ main {
 aside {
   width: 30%;
 }
-
+/* setting scrollable feature */
 .scroll {
   overflow-y: scroll;
 }
@@ -65,14 +65,14 @@ aside {
 section {
   margin-bottom: 25px;
 }
-
+/* main artist Info styling and animations */
 .main-carousel {
   box-sizing: border-box;
   color: white;
   background-color: #141b41;
   display: flex;
 }
-
+/* artist container styling */
 .artist-container {
   height: 100%;
   width: 100%;
@@ -144,7 +144,7 @@ section {
   letter-spacing: 0.1rem;
   cursor: pointer;
 }
-
+/* artist music list container styling */
 .music-list {
   height: 500px;
   color: white;
@@ -199,7 +199,7 @@ section {
 .music-item-container .artist-use span {
   margin: 10px;
 }
-
+/* aside queue styling */
 .queue-heading {
   color: white;
   margin-left: 30px;
@@ -309,7 +309,7 @@ section {
   height: 60px;
   width: 60px;
 }
-
+/* navbar item styling */
 .nav-first-item {
   display: flex;
   flex-direction: row;
@@ -397,7 +397,7 @@ section {
   margin: auto;
   border-radius: 50%;
 }
-
+/* music player styling */
 .music-player {
   position: fixed;
   width: 83.4%;
@@ -449,7 +449,7 @@ section {
   font-size: 0.4rem;
   color: darkgray;
 }
-
+/* music player controls styling */
 .music-player-control-container {
   display: flex;
   justify-content: center;
@@ -546,7 +546,7 @@ section {
   padding: 0;
   cursor: pointer;
 }
-
+/*hidden queue styling */
 .queue-hidden-playlist {
   position: fixed;
   margin: auto;
@@ -613,7 +613,7 @@ section {
 .menu ul li:hover {
   background-color: #ddd;
 }
-
+/* adjusting size of music player controls for small screens */
 @media only screen and (max-width: 600px) {
   body {
     padding: 0;
@@ -625,12 +625,12 @@ section {
   main {
     width: 100%;
   }
-
+  /* main artist size adjust and animation adjust */
   .main-poster-item img {
     height: 90%;
     width: 320px;
   }
-
+  /* adjusting navbar items  */
   .nav-main {
     height: 85px;
     width: 100%;
@@ -641,7 +641,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-
+  /* music player controls size adjust */
   .music-player-container {
     font-size: 0.4rem;
   }
@@ -665,7 +665,12 @@ section {
   .shuffle {
     display: none;
   }
-
+  .previous,
+  .next,
+  .pause-player-btn {
+    font-size: 0.8rem;
+  }
+  /* music queue functionality adjust  */
   .ply-music-queue i {
     font-size: 0.7rem;
     margin-right: 5px;
@@ -675,7 +680,7 @@ section {
     height: 60%;
     width: 95%;
   }
-
+  /* artist info container size adjust */
   .artist-container {
     flex-direction: column;
   }

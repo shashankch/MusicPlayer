@@ -1,7 +1,7 @@
 html {
   font-size: 30px;
 }
-
+/* body styling */
 body {
   margin: 0px 30px;
   padding: 0px 30px;
@@ -11,6 +11,7 @@ body {
   background-color: #0c1027;
 }
 
+/* navbar styling */
 .nav-main {
   height: 85px;
   width: 100%;
@@ -34,12 +35,14 @@ body {
   justify-content: space-evenly;
 }
 
+/* main page content styling */
 .main-content {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
+/* setting width of main and aside section */
 main {
   width: 70%;
   display: flex;
@@ -50,6 +53,7 @@ aside {
   width: 30%;
 }
 
+/* setting scrollable feature */
 .scroll {
   height: 1000px;
   overflow-y: scroll;
@@ -67,9 +71,11 @@ section {
   margin-bottom: 25px;
 }
 
+/* main carousel styling and animations */
 .main-carousel {
   margin: 0px 10px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .main-posters-container {
@@ -124,6 +130,7 @@ section {
   }
 }
 
+/* latest release albums styling */
 .latest-release-container {
   display: flex;
   flex-wrap: wrap;
@@ -160,6 +167,8 @@ section {
   opacity: 0.7;
   display: none;
 }
+
+/* setting functionality for display of music player on click */
 #pausebtn1:checked ~ label .pause {
   display: block;
 }
@@ -200,6 +209,7 @@ section {
   display: none;
 }
 
+/* heading styling for entire page */
 .main-release-heading,
 .queue-heading {
   color: white;
@@ -209,6 +219,7 @@ section {
   margin-bottom: 15px;
 }
 
+/* latest album container styling */
 .latest-release-poster {
   position: relative;
   display: inline-block;
@@ -240,6 +251,8 @@ section {
   position: absolute;
   font-size: 0.35rem;
 }
+
+/* menu styling */
 .latest-music-menu {
   position: absolute;
   right: 15px;
@@ -266,7 +279,7 @@ section {
   padding: 10px;
   position: absolute;
 }
-
+/* popular artists container styling and hover */
 .popular-artists-container {
   display: flex;
   flex-direction: row;
@@ -303,14 +316,14 @@ section {
   color: transparent;
 }
 
-#artists-name {
+.artists-name {
   display: block;
   color: white;
   font-size: 0.5rem;
   text-align: center;
   font-weight: lighter;
 }
-
+/* radion stations and genre container styling and animations */
 .genre-container {
   background-color: #141b41;
   display: flex;
@@ -363,7 +376,7 @@ section {
   width: 120px;
   height: 120px;
 }
-
+/* hindi and english album container styling */
 .main-music-english {
   padding: 5px;
 }
@@ -393,6 +406,7 @@ section {
   height: 120px;
 }
 
+/* aside queue playlist container styling */
 .queue-container {
   position: relative;
 }
@@ -416,7 +430,7 @@ section {
   display: none;
   color: black;
 }
-
+/* queue menu styling */
 .queue-options ul {
   list-style: none;
   margin: 5px;
@@ -438,7 +452,7 @@ section {
 #queue-menu {
   margin-left: 10px;
 }
-
+/* queue item container styling */
 .queue-cards-container {
   height: 500px;
   overflow-y: scroll;
@@ -501,7 +515,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-
+/* navbar logo and search  styling and icon styling */
 .nav-logo,
 .nav-favour,
 .nav-search,
@@ -582,7 +596,7 @@ section {
   margin: auto;
   border-radius: 50%;
 }
-
+/* music player styling */
 .music-player {
   position: fixed;
   width: 83.4%;
@@ -635,7 +649,7 @@ section {
   font-size: 0.4rem;
   color: darkgray;
 }
-
+/* music player controls styling */
 .music-player-control-container {
   display: flex;
   justify-content: center;
@@ -730,7 +744,7 @@ section {
   padding: 0;
   cursor: pointer;
 }
-
+/* hidden queue styling */
 .queue-hidden-playlist {
   position: fixed;
   margin: auto;
@@ -797,19 +811,20 @@ section {
 .menu ul li:hover {
   background-color: #ddd;
 }
-
+/* media query for small devices and setting responsiveness */
 @media only screen and (max-width: 600px) {
   body {
     padding: 0;
     margin: 10px;
   }
+  /* hide queue and enable queue button in music player to view queue. */
   aside {
     display: none;
   }
   main {
     width: 100%;
   }
-
+  /* adjusting dimension for small screens */
   .latest-release-container {
     display: flex;
     flex-direction: column;
@@ -842,7 +857,7 @@ section {
   #ply-music-sb-head {
     font-size: 0.3rem;
   }
-
+  /* adjusting size of music player controls for small screens */
   .music-player-control-container .player-controls .pause-player-btn {
     font-size: 1rem;
   }
@@ -862,5 +877,47 @@ section {
   .queue-hidden-playlist {
     height: 60%;
     width: 90%;
+  }
+
+  .previous,
+  .next,
+  .pause-player-btn {
+    font-size: 0.8rem;
+  }
+  /* main carousel size adjust and animation adjust */
+  .main-poster-item img {
+    width: 300px;
+  }
+
+  .main-poster-item {
+    animation: 15s slide2 infinite !important;
+  }
+
+  @keyframes slide2 {
+    0% {
+      left: 0;
+    }
+    15% {
+      left: -100%;
+    }
+    30% {
+      left: -200%;
+    }
+    45% {
+      left: -300%;
+    }
+    60% {
+      left: -400%;
+    }
+    75% {
+      left: -550%;
+    }
+    85% {
+      left: -100%;
+    }
+
+    100% {
+      left: 0%;
+    }
   }
 }
